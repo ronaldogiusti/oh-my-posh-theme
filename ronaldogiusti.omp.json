@@ -49,6 +49,20 @@
         },
         /*
         {
+          "type":"sysinfo",
+          "powerline_symbol": "",
+          "foreground": "#ffffff",
+          "background": "#8f43f3",
+          "invert_powerline": true,
+          "properties": {
+            "prefix": " \uf85a ",
+            "postfix": "% ",
+            "precision": 2,
+            "template":"{{ round .PhysicalPercentUsed .Precision }}"
+          },
+          "style":"powerline"
+        },
+        {
           "type": "session",
           "style": "diamond",
           "foreground": "#ffffff",
