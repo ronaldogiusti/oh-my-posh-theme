@@ -11,8 +11,8 @@
           "style": "diamond",
           "leading_diamond": "\ue0c2\ue0c2",
           "trailing_diamond": "\uE0B0",
-          "foreground": "#ffffff",
-          "background": "#9A348E",
+          "foreground": "#000000",
+          "background": "#FFFF00",
           "properties": {
             "alpine": "\uf300",
             "arch": "\uf303",
@@ -31,6 +31,20 @@
             "wsl": "\ue712",
             "wsl_separator": " on ",
             "windows": "\ue70f"
+          }
+        },
+        {
+          "type": "spotify",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#ffffff",
+          "background": "#1BD760",
+          "properties": {
+            "prefix": "\uF9C6 ",
+            "playing_icon": "\uE602 ",
+            "paused_icon": "\uF8E3 ",
+            "stopped_icon": "\uF04D ",
+            "track_separator" : " - "
           }
         },
         /*
