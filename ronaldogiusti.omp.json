@@ -7,6 +7,34 @@
       "alignment": "left",
       "segments": [
         {
+          "type": "os",
+          "style": "diamond",
+          "leading_diamond": "\ue0c2\ue0c2",
+          "trailing_diamond": "\uE0B0",
+          "foreground": "#ffffff",
+          "background": "#9A348E",
+          "properties": {
+            "alpine": "\uf300",
+            "arch": "\uf303",
+            "centos": "\uf304",
+            "debian": "\uf306",
+            "elementary": "\uf309",
+            "fedora": "\uf30a",
+            "gentoo": "\uf30d",
+            "linux": "\ue712",
+            "macos": "\ue711",
+            "manjaro": "\uf312",
+            "mint": "\uf30f",
+            "opensuse": "\uf314",
+            "raspbian": "\uf315",
+            "ubuntu": "\uf31c",
+            "wsl": "\ue712",
+            "wsl_separator": " on ",
+            "windows": "\ue70f"
+          }
+        },
+        /*
+        {
           "type": "session",
           "style": "diamond",
           "foreground": "#ffffff",
@@ -18,6 +46,7 @@
             "display_host": false
           }
         },
+        */
         {
           "type": "path",
           "style": "powerline",
@@ -25,7 +54,11 @@
           "foreground": "#ffffff",
           "background": "#DA627D",
           "properties": {
-            "style": "folder"
+            "style": "agnoster_short",
+            "enable_hyperlink": true,
+            "home_icon": "\uF7DB ",
+            "folder_icon": "<#ffffff>\ue5fe </>",
+            "folder_separator_icon": "<#ffffff>\uE0B1 </>"
           }
         },
         {
@@ -38,10 +71,8 @@
             "fetch_stash_count": true,
             "fetch_upstream_icon": true,
             "branch_icon": "",
-            "fetch_status": false,
-            "template": "{{ .UpstreamIcon }}{{ .HEAD }}{{ if gt .StashCount 0 }} \uF692 {{ .StashCount }}{{ end }}",
-            "prefix": " \u279C (",
-            "postfix": ") "
+            "fetch_status": true,
+            "template": "{{ .UpstreamIcon }}{{ .HEAD }}{{ if .Staging.Changed }}<#2FDA4E> \uF046 {{ .Staging.String }}</>{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }}<#E84855> \uF044 {{ .Working.String }}</>{{ end }}"
           }
         },
         {
